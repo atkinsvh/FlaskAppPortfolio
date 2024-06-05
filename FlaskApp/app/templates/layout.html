@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Your Name</h1>
+            <p>Data Scientist | Software Developer</p>
+        </div>
+    </header>
+    <nav class="accordion-nav">
+        <div class="nav-item">
+            <input type="checkbox" id="home">
+            <label for="home">Home</label>
+            <div class="content">
+                <a href="/">Home</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <input type="checkbox" id="projects">
+            <label for="projects">Projects</label>
+            <div class="content">
+                <a href="/projects">Projects</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <input type="checkbox" id="about">
+            <label for="about">About Me</label>
+            <div class="content">
+                <a href="/about">About Me</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <input type="checkbox" id="contact">
+            <label for="contact">Contact</label>
+            <div class="content">
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

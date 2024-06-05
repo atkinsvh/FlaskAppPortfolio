@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section id="home">
+    <h2>Geocoding and Heatmap</h2>
+    <h3>Upload CSV File</h3>
+    <form action="{{ url_for('upload_heatmap_file') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    <h3>Manual Entry</h3>
+    <form action="{{ url_for('manual_entry') }}" method="post">
+        <textarea name="data" rows="10" cols="50" placeholder="Enter data manually"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+{% endblock %}
